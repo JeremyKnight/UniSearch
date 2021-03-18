@@ -102,3 +102,21 @@ img {vertical-align: middle;}
   top: 8px;
   right: 16px;
 }
+
+.compareBox{ 
+  height: 500px;
+  width: 300px;
+  background-color: powderblue;
+  border-style: double;
+}
+
+#leftCompare{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+#rightCompare{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
