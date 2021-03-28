@@ -106,17 +106,33 @@ img {vertical-align: middle;}
 .compareBox{ 
   height: 500px;
   width: 300px;
-  background-color: powderblue;
+  background-color: rgb(255, 255, 255);
   border-style: double;
+  
 }
 
 #leftCompare{
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 200px;
+  left: 500px;
+  background-image: url("image/Whitworth.jpg") ;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-repeat: no-repeat;
+  background-size: 75px;
 }
 #rightCompare{
   position: absolute;
-  top: 100px;
-  left: 500px;
+  top: 200px;
+  left: 1000px;
+  background-image: url("image/gonzaga.png");
+  background-position-x: 0px;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 120px;
+
+} 
+p{
+  color:blueviolet;
+  text-align: center;
 }
