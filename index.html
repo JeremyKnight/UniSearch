@@ -4,37 +4,31 @@
 <link rel="stylesheet" href="style.css">
 <head>
     <!-- BEGIN Pre-requisites -->
-    <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
     </script>
     <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
-    </script-->
+    </script>
 
-<script>
+<!--script>
   function start() {
     gapi.load('auth2', function() {
       auth2 = gapi.auth2.init({
-        client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+        client_id: '562318513434-bnen7hken7s6lpctvgp047t5pp340u7c.apps.googleusercontent.com',
         // Scopes to request in addition to 'profile' and 'email'
         //scope: 'additional_scope'
       });
     });
   }
-</script>
+</script-->
     <!-- END Pre-requisites -->
-
-    <style>
-       
-        </style>
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="people.html">People</a>
-        <a href="compare.html">Compare</a>
-        
-
-    </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="compare.html">COMPARE</a></li>
+</ul>
     <button id="signinButton">Sign in with Google</button>
     <!--script>
       $('#signinButton').click(function() {
@@ -43,8 +37,8 @@
     });
 </script-->
     <h1> UniSearch! </h1>
-    <h2> Description: </h2> 
-    <p> In many cases an individual who is transferring from one college to another will face the challenge of finding a university to fit their desired needs. Uni-search is an app for transfer students that have college credit or have earned an AA degree. This app will give the resources to find the best educational opportunities best suited to students' individual needs. When searching for a university, students will consider the academic rigor, social atmosphere, extracurricular options, and ability to pay. This will be done through a survey, that will then direct students to the top school that fit their criteria. Users will then be able to click on a university to learn more about it. Students can also connect with admission officers and student ambassadors in order to learn more about a certain university. This app in particular will only include Washington State universities and colleges.  
+    <h2 class="iPage"> Description: </h2> 
+    <p class="iPage"> In many cases an individual who is transferring from one college to another will face the challenge of finding a university to fit their desired needs. Uni-search is an app for transfer students that have college credit or have earned an AA degree. This app will give the resources to find the best educational opportunities best suited to students' individual needs. When searching for a university, students will consider the academic rigor, social atmosphere, extracurricular options, and ability to pay. This will be done through a survey, that will then direct students to the top school that fit their criteria. Users will then be able to click on a university to learn more about it. Students can also connect with admission officers and student ambassadors in order to learn more about a certain university. This app in particular will only include Washington State universities and colleges.  
         <br><br>
         This app is also an effort to level the playing field so that every student has equal opportunity to explore and evaluate prospective colleges.  Traditionally, students were expected to travel to many different schools, take tours, attend information sessions, and explore the surrounding area.  In the past, this method of exploring college was often closed off to minority groups and first-generation college students, forcing them to make decisions based on limited information.  With the development of this app, we will be able to offer clear, detailed, comparisons between colleges from the comfort of your phone.  Additionally, with uncertainty from the COVID-19 pandemic, this also offers a safe alternative for students to explore their transfer options. 
         <br><br>
@@ -52,8 +46,8 @@
         <br><br>
         Solve: Assist students in exploring the best educational opportunities offered throughout different universities in Washington state to fit their individual needs.  Students can filter through prospective universities based on location, size, and estimated cost to attend.  </p>
     </p>
-    <h2> Describe Audience: </h2>
-    <P>
+    <h2 class="iPage"> Describe Audience: </h2>
+    <P class="iPage">
         Transfer students, students with college credit, or individuals with AA 
     </P>
     <!--
@@ -137,7 +131,7 @@
               // Send the code to the server
               $.ajax({
                 type: 'POST',
-                url: 'http://example.com/storeauthcode',
+                url: 'https://unisearch2.azurewebsites.net',
                 // Always include an `X-Requested-With` header in every AJAX request,
                 // to protect against CSRF attacks.
                 headers: {
