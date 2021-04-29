@@ -104,6 +104,7 @@ img {vertical-align: middle;}
 }
 
 .compareBox{ 
+  
   height: 60%;
   width: 20%; 
   background-color: rgb(252, 252, 252);
@@ -118,7 +119,7 @@ img {vertical-align: middle;}
 #leftCompare{
   
   float: left;
-  background-image: url("image/Whitworth.jpg") ;
+  background-image: url("image/Whitworth.jpg");
   background-position-x: 50%;
   background-position-y: 10px;
   background-repeat: no-repeat;
@@ -126,7 +127,7 @@ img {vertical-align: middle;}
   font-size: x-large;
 }
 #rightCompare{
- 
+  padding-right: 10px;
   float: right;
   background-image: url("image/gonzaga.png");
   background-position-x: 50%;
@@ -186,7 +187,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: rgb(94, 15, 68);
 }
 
 img.pers {
