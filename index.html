@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title> UniSearch Home Page </title>
+<title> UniSearch - Home </title>
 <link rel="stylesheet" href="style.css">
+<script src="myScript.js"> </script>
 <!--link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”-->
 <head>
     <!-- BEGIN Pre-requisites -->
@@ -33,7 +34,7 @@
     <button id="signinButton">Sign in with Google</button>
     <script>
       $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
+      // signInCallback defined in step 6.
       auth2.grantOfflineAccess().then(signInCallback);
     });
 </script>
@@ -93,7 +94,7 @@
       </div>
      <br> <br> <br> <br> <br>
      
-    <script>
+    <!--script>
         var slideIndex = 1;
         showSlides(slideIndex);
         
@@ -120,9 +121,9 @@
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
-        </script>
+        </script-->
         
-        <script>
+        <!--script>
           function signInCallback(authResult) {
             if (authResult['code']) {
           
@@ -149,7 +150,7 @@
               // There was an error.
             }
           }
-        </script>
+        </script-->
 </body>
 
 </html>

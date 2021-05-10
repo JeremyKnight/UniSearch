@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <title> UniSearch - Compare </title>
 <link rel="stylesheet" href="style.css">
 <head>
     <!-- BEGIN Pre-requisites -->
@@ -19,6 +20,13 @@
         <li><a href="people.html">People</a></li>
         <li><a href="compare.html">COMPARE</a></li>
     </ul>
+    <button id="signinButton">Sign in with Google</button>
+    <script>
+      $('#signinButton').click(function() {
+      // signInCallback defined in step 6.
+      auth2.grantOfflineAccess().then(signInCallback);
+    });
+    </script>
     
     <div style='margin-left:auto;margin-right:auto; width:75%; padding-top: 50px;'>
         <div class="compareBox" id="leftCompare">
