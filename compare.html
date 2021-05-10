@@ -2,13 +2,24 @@
 <html>
     <title> UniSearch - Compare </title>
 <link rel="stylesheet" href="style.css">
+<script src="myScript.js"> </script>
 <head>
     <!-- BEGIN Pre-requisites -->
     <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
     </script>
     <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
     </script-->
-    
+    <script>
+        function start() {
+          gapi.load('auth2', function() {
+            auth2 = gapi.auth2.init({
+              client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+              // Scopes to request in addition to 'profile' and 'email'
+              //scope: 'additional_scope'
+            });
+          });
+        }
+      </script>
 </head>
 <style>
    
@@ -19,6 +30,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="compare.html">COMPARE</a></li>
+        <li><a href="home.html"> DataInput</a></li>
     </ul>
     <button id="signinButton">Sign in with Google</button>
     <script>

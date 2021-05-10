@@ -2,6 +2,7 @@
 <html>
   <title> UniSearch - People </title>
 <link rel="stylesheet" href="style.css">
+<script src="myScript.js"> </script>
 <head>
     <!-- BEGIN Pre-requisites -->
     <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
@@ -39,7 +40,9 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="people.html">People</a></li>
     <li><a href="compare.html">COMPARE</a></li>
-</ul>
+    <li><a href="home.html"> DataInput</a></li>
+  </ul>
+  
 <button id="signinButton">Sign in with Google</button>
     <script>
       $('#signinButton').click(function() {
@@ -47,7 +50,7 @@
       auth2.grantOfflineAccess().then(signInCallback);
     });
     </script>
-    
+
     <h1> The people on our team! </h1>
     <div>
         <img src="image/IMG_CS class.jpg" alt="Maddie" width="400" class="pers">
