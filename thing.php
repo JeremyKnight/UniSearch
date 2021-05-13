@@ -12,5 +12,5 @@
     // //Choose the database to use
      $db = mssql_select_db("library") or die("cannot open library: ".mssql_error());
     // echo "whats up";
-     />
+     ?>
 </body><html>
