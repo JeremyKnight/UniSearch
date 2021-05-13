@@ -7,7 +7,7 @@
     echo "Sql: '".$SQL."'";
 
      $conn = mssql_connect("UniSearchPeople") or die("cannot connect :");
-     echo "connected";
+     //echo "connected";
     
     // //Choose the database to use
      $db = mssql_select_db("library") or die("cannot open library: ".mssql_error());
