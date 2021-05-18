@@ -105,15 +105,18 @@ img {vertical-align: middle;}
 
 .compareBox{ 
   
-  height: 60%;
-  width: 20%; 
-  background-color: rgb(252, 252, 252);
+  height: 70%;
+  width: 30%; 
+  background-color: rgb(255, 255, 255);
   border-style: double;
 }
 
 .comparetitle{
   font-family:'castellar';
-  padding-top: 90px;
+  padding-top: 85px;
+}
+.text{
+  padding-top: 85px;
 }
 
 #leftCompare{
@@ -121,10 +124,11 @@ img {vertical-align: middle;}
   float: left;
   background-image: url("image/Whitworth.jpg");
   background-position-x: 50%;
-  background-position-y: 10px;
+  background-position-y: 15px;
   background-repeat: no-repeat;
   background-size: 75px;
   font-size: x-large;
+  height: 550px;
 }
 #rightCompare{
   padding-right: 10px;
@@ -135,10 +139,11 @@ img {vertical-align: middle;}
   background-repeat: no-repeat;
   background-size: 120px;
   font-size: x-large;
+  height: 550px;
 } 
 #ComparableSchools{
   
-  top:85%; 
+  top:90%; 
   left:42.5%;
   font-size:x-large;
   text-decoration: underline;
@@ -199,4 +204,46 @@ img.pers {
 #dataInput {
   margin: 0 auto;
   
+}
+.column{ 
+  padding-top: 5%;
+  height: 70%;
+  width: 30%; 
+  background-color: rgb(255, 255, 255);
+  border-style: double;
+}
+
+#Whitworth {
+  float: left;
+  background-image: url("image/Whitworth.jpg");
+  background-position-x: 50%;
+  background-position-y: 15px;
+  background-repeat: no-repeat;
+  background-size: 75px;
+  font-size: x-large;
+  height: 550px;
+  width: 25%;
+  /* font-size: x-large;
+  height: 550px; Should be removed. Only for demonstration */
+}
+#Gonzaga {
+  padding-right: 10px;
+  float: right;
+  background-image: url("image/gonzaga.png");
+  background-position-x: 50%;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 120px;
+  font-size: x-large;
+  height: 550px;
+  width: 25%;
+  /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
