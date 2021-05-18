@@ -11,7 +11,17 @@
      $serverName = "tcp:unisearchdb.database.windows.net,1433";
      $conn = sqlsrv_connect($serverName, $connectionInfo);
      
-     echo $conn;
+     if($SQL=="all") {
+          echo "all from conditional";
+     } else if($SQL=="two") {
+          echo "two from conditional";
+     } else if($sql=="one") {
+          echo "one from conditional";
+     } else {
+          echo "something is wrong";
+     }
+     //for all: SELECT * FROM DBO.CUSTOMERS
+     //FOR 2: 
      //$conn = mssql_connect("UniSearchPeople") or die("cannot connect :");
      //echo "connected";
     
