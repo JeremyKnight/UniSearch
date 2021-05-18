@@ -11,6 +11,7 @@
      $serverName = "tcp:unisearchdb.database.windows.net,1433";
      $conn = sqlsrv_connect($serverName, $connectionInfo);
      
+     echo $conn;
      //$conn = mssql_connect("UniSearchPeople") or die("cannot connect :");
      //echo "connected";
     
