@@ -24,7 +24,10 @@
                echo " error from all query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          
+          echo "num rows" . sqlsrv_num_rows($stmt);
+          while($row = sqlsrv_fetch($stmt)) {
+               echo $row[0].", ".$row[1]."<br/>";
+          }
           // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
           //      echo $row[0].", ".$row[1]."<br/>";
           // }
