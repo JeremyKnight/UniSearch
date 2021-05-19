@@ -19,16 +19,14 @@
           echo $query;
      } else if($SQL=="two") {
           echo "two from conditional";
-          $query = "";
+          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
           echo $query;
      } else if($sql=="one") {
           echo "one from conditional";
-          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
+          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Janet')";
           echo $query;
      } else {
           echo "something is wrong";
-          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Janet')";
-          echo $query;
      }
 
      //for all: SELECT * FROM DBO.CUSTOMERS
