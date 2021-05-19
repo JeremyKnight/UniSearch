@@ -15,7 +15,7 @@
      //this didn't print out anything...
      echo "got here\n";
      if($SQL=="all") {
-          echo " all from conditional ";
+          echo " all from conditional <br/>";
           $query = "SELECT * FROM DBO.CUSTOMERS";
           //$result = mssql_query($query);
           //$result=array(1, "some data");
@@ -41,7 +41,7 @@
 
           echo $stmt;
      } else if($SQL=="two") {
-          echo "two from conditional";
+          echo "two from conditional <br/>";
           $query = "SELECT * FROM DBO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
@@ -62,7 +62,7 @@
 
           echo $stmt;
      } else if($sql=="one") {
-          echo "one from conditional";
+          echo "one from conditional <br/>";
           $query = "SELECT * FROM DBO.CUSTOMERS WHERE NAME IN ('Janet')";
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
