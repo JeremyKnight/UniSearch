@@ -24,7 +24,7 @@
                echo " error from all query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          echo "num rows" . sqlsrv_num_rows($stmt) . "<br/>";
+          //echo "num rows" . sqlsrv_num_rows($stmt) . "<br/>";
           while($row = sqlsrv_fetch_array($stmt)) {
                echo $row['CustomerID'].", ".$row['Name']."<br/>";
                //print_r($row);          
@@ -50,10 +50,11 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
-          echo "num rows" . sqlsrv_num_rows($stmt);
-          while($row = sqlsrv_fetch($stmt)) {
-               echo $row[0].", ".$row[1]."<br/>";
+          while($row = sqlsrv_fetch_array($stmt)) {
+               echo $row['CustomerID'].", ".$row['Name']."<br/>";
+               //print_r($row);          
           }
+          
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
@@ -69,7 +70,10 @@
                echo " error from one query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          
+          while($row = sqlsrv_fetch_array($stmt)) {
+               echo $row['CustomerID'].", ".$row['Name']."<br/>";
+               //print_r($row);          
+          }
           // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
           //      echo $row[0].", ".$row[1]."<br/>";
           // }
