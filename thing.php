@@ -24,10 +24,10 @@
                echo " error from all query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          echo "num rows" . sqlsrv_num_rows($stmt);
+          echo "num rows" . sqlsrv_num_rows($stmt) . "<br/>";
           while($row = sqlsrv_fetch_array($stmt)) {
-          //     echo $row['CustomerID'].", ".$row['Name']."<br/>";
-               print_r($row);          
+               echo $row['CustomerID'].", ".$row['Name']."<br/>";
+               //print_r($row);          
           }
           // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
           //      echo $row[0].", ".$row[1]."<br/>";
