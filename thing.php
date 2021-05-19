@@ -25,9 +25,9 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
-          while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
-               echo $row[0].", ".$row[1]."<br/>";
-          }
+          // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
+          //      echo $row[0].", ".$row[1]."<br/>";
+          // }
           
           // print_r();
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
@@ -46,9 +46,9 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
-          while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
-               echo $row[0].", ".$row[1]."<br/>";
-          }
+          // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
+          //      echo $row[0].", ".$row[1]."<br/>";
+          // }
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
@@ -65,9 +65,9 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
-          while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
-               echo $row[0].", ".$row[1]."<br/>";
-          }
+          // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
+          //      echo $row[0].", ".$row[1]."<br/>";
+          // }
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
