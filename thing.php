@@ -7,7 +7,7 @@
     //echo "Sql: '".$SQL."'";
 
 
-    $connectionInfo = array("UID" => "jkPerson", "pwd" => "{your_password_here}", "Database" => "People", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $connectionInfo = array("UID" => "jkPerson", "pwd" => "serverPassword!", "Database" => "People", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
      $serverName = "tcp:unisearchdb.database.windows.net,1433";
      $conn = sqlsrv_connect($serverName, $connectionInfo)
           or die("failed to connect");
@@ -33,7 +33,7 @@
           echo $stmt;
      } else if($SQL=="two") {
           echo "two from conditional";
-          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
+          $query = "SELECT * FROM DBO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
@@ -49,7 +49,7 @@
           echo $stmt;
      } else if($sql=="one") {
           echo "one from conditional";
-          $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Janet')";
+          $query = "SELECT * FROM DBO.CUSTOMERS WHERE NAME IN ('Janet')";
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
