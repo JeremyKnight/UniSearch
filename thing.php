@@ -24,7 +24,9 @@
                echo " error from all query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          //print_r();
+          
+          sqlsrv_fetch($stmt);
+          // print_r();
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
@@ -41,6 +43,7 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
+          sqlsrv_fetch($stmt);
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
@@ -57,6 +60,7 @@
                die( print_r( sqlsrv_errors(), true));
           }
           
+          sqlsrv_fetch($stmt);
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
