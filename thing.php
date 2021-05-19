@@ -17,32 +17,48 @@
           echo "all from conditional";
           $query = "SELECT * FROM DBO.CUSTOMERS";
           //$result = mssql_query($query);
-          $result=odbc_exec($conn, $query) or
-               die("error executing query: ".odbc_error());
-
-          for($i=0;$i<mssql_num_rows($result); ++$i) {
-               $line = mssql_fetch_row($result);
-               print("$line[0]-$line[1]\n");
+          $result=array(1, "some data");
+          $stmt=sqlsrv_query($conn, $query, $results);
+          if( $stmt === false ) {
+               die( print_r( sqlsrv_errors(), true));
           }
-          echo $result;
+          
+          // for($i=0;$i<mssql_num_rows($result); ++$i) {
+          //      $line = mssql_fetch_row($result);
+          //      print("$line[0]-$line[1]\n");
+          // }
+
+          echo $stmt;
      } else if($SQL=="two") {
           echo "two from conditional";
           $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
-          $result = mssql_query($query);
-          for($i=0;$i<mssql_num_rows($result); ++$i) {
-               $line = mssql_fetch_row($result);
-               print("$line[0]-$line[1]\n");
+          $result=array(1, "some data");
+          $stmt=sqlsrv_query($conn, $query, $results);
+          if( $stmt === false ) {
+               die( print_r( sqlsrv_errors(), true));
           }
-          echo $result;
+          
+          // for($i=0;$i<mssql_num_rows($result); ++$i) {
+          //      $line = mssql_fetch_row($result);
+          //      print("$line[0]-$line[1]\n");
+          // }
+
+          echo $stmt;
      } else if($sql=="one") {
           echo "one from conditional";
           $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Janet')";
-          $result = mssql_query($query);
-          for($i=0;$i<mssql_num_rows($result); ++$i) {
-               $line = mssql_fetch_row($result);
-               print("$line[0]-$line[1]\n");
+          $result=array(1, "some data");
+          $stmt=sqlsrv_query($conn, $query, $results);
+          if( $stmt === false ) {
+               die( print_r( sqlsrv_errors(), true));
           }
-          echo $result;
+          
+          // for($i=0;$i<mssql_num_rows($result); ++$i) {
+          //      $line = mssql_fetch_row($result);
+          //      print("$line[0]-$line[1]\n");
+          // }
+
+          echo $stmt;
      } else {
           echo "something is wrong";
      }
