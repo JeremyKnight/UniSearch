@@ -12,21 +12,29 @@
      $conn = sqlsrv_connect($serverName, $connectionInfo);
      
      //this didn't print out anything...
-     echo "got here";
+     echo "got here\n";
      if($SQL=="all") {
           echo "all from conditional";
           $query = "SELECT * FROM DBO.CUSTOMERS";
-          echo $query;
+          $result = mssql_query($query);
+          echo $result;
      } else if($SQL=="two") {
           echo "two from conditional";
           $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Orlando','Keith')";
-          echo $query;
+          $result = mssql_query($query);
+          echo $result;
      } else if($sql=="one") {
           echo "one from conditional";
           $query = "SELECT * FROM BDO.CUSTOMERS WHERE NAME IN ('Janet')";
-          echo $query;
+          $result = mssql_query($query);
+          echo $result;
      } else {
           echo "something is wrong";
+     }
+
+     for($i=0;$i<mssql_num_rows($result); ++$i) {
+          $line = mssql_fetch_row($result);
+          print("$line[0]-$line[1]\n");
      }
 
      //for all: SELECT * FROM DBO.CUSTOMERS
