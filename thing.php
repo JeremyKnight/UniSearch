@@ -9,21 +9,22 @@
 
     $connectionInfo = array("UID" => "jkPerson", "pwd" => "{your_password_here}", "Database" => "People", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
      $serverName = "tcp:unisearchdb.database.windows.net,1433";
-     $conn = sqlsrv_connect($serverName, $connectionInfo);
+     $conn = sqlsrv_connect($serverName, $connectionInfo)
+          or die("failed to connect");
      
      //this didn't print out anything...
      echo "got here\n";
      if($SQL=="all") {
-          echo "all from conditional";
+          echo " all from conditional ";
           $query = "SELECT * FROM DBO.CUSTOMERS";
           //$result = mssql_query($query);
-          $result=array(1, "some data");
-          $stmt=sqlsrv_query($conn, $query, $results);
+          //$result=array(1, "some data");
+          $stmt=sqlsrv_query($conn, $query);
           if( $stmt === false ) {
-               echo "error from something \n";
+               echo " error from all query \n";
                die( print_r( sqlsrv_errors(), true));
           }
-          
+          //print_r();
           // for($i=0;$i<mssql_num_rows($result); ++$i) {
           //      $line = mssql_fetch_row($result);
           //      print("$line[0]-$line[1]\n");
@@ -36,7 +37,7 @@
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
-               echo "error from something \n";
+               echo " error from two query \n";
                die( print_r( sqlsrv_errors(), true));
           }
           
@@ -52,7 +53,7 @@
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
-               echo "error from something \n";
+               echo " error from one query \n";
                die( print_r( sqlsrv_errors(), true));
           }
           
