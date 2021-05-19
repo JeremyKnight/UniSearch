@@ -20,6 +20,7 @@
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
+               echo "error from something \n";
                die( print_r( sqlsrv_errors(), true));
           }
           
@@ -35,6 +36,7 @@
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
+               echo "error from something \n";
                die( print_r( sqlsrv_errors(), true));
           }
           
@@ -50,6 +52,7 @@
           $result=array(1, "some data");
           $stmt=sqlsrv_query($conn, $query, $results);
           if( $stmt === false ) {
+               echo "error from something \n";
                die( print_r( sqlsrv_errors(), true));
           }
           
