@@ -7,10 +7,10 @@
     //echo "Sql: '".$SQL."'";
 
 
-    $connectionInfo = array("UID" => "jkPerson", "pwd" => "serverPassword!", "Database" => "UnisearchPeople", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $connectionInfo = array("UID" => "jkPerson", "pwd" => "serverPassword!", "Database" => "People", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
      $serverName = "tcp:unisearchdb.database.windows.net,1433";
      $conn = sqlsrv_connect($serverName, $connectionInfo)
-          or die("failed to connect");
+          or die( print_r( sqlsrv_errors(), true));
      
      //this didn't print out anything...
      echo "got here\n";
