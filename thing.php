@@ -26,7 +26,8 @@
           }
           echo "num rows" . sqlsrv_num_rows($stmt);
           while($row = sqlsrv_fetch($stmt)) {
-               echo $row['CustomerID'].", ".$row['Name']."<br/>";
+          //     echo $row['CustomerID'].", ".$row['Name']."<br/>";
+               print_r($row);          
           }
           // while($row = sqlsrv_fetch($stmt, SQLSRV_FETCH_NUMERIC) {
           //      echo $row[0].", ".$row[1]."<br/>";
