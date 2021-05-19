@@ -16,7 +16,9 @@
      if($SQL=="all") {
           echo "all from conditional";
           $query = "SELECT * FROM DBO.CUSTOMERS";
-          $result = mssql_query($query);
+          //$result = mssql_query($query);
+          $result=odbc_exec($conn, $query) or
+               die("error executing query: ".odbc_error());
           echo $result;
      } else if($SQL=="two") {
           echo "two from conditional";
